@@ -1,20 +1,24 @@
 <template>
-    <button :style="{backgroundColor: color}" @click="onClick">{{ texto }}</button>
+    <button @click="onClick"><b>{{ texto }}</b></button>
 </template>
 
 <script>
-export default {
-  name: 'Button',
-  props: {
-    texto: String,
-    color: String,
-    onClick: Function
+  export default {
+    name: 'Button',
+    props: {
+      texto: String,
+      onClick: Function
+    }
   }
-}
 </script>
 
 <style scoped>
 button {
-    background: #EE2E5D;
+  background: #EE2E5D;
+  cursor: pointer;
+}
+
+.buttonBlack {
+  background: #2F2F33;
 }
 </style>
